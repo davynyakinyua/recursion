@@ -6,6 +6,8 @@ const nums = [5, 4, 2, 3, 1, 6, 8, 7];
 // function to perform merge sort
 function mergeSort (arr) {
 
+    console.log("This was printed recursevely");
+    
     // base case if arr is empty
     if(arr.length === 0){
         return [];
@@ -19,7 +21,7 @@ function mergeSort (arr) {
     const mid = Math.floor(arr.length / 2); // midpoint of array for division into two
     const firstHalf = mergeSort(arr.slice(0, mid));
     const secondHalf = mergeSort(arr.slice(mid));
-    
+
     // merge the sorted halves
     return merge(firstHalf, secondHalf);
 }
